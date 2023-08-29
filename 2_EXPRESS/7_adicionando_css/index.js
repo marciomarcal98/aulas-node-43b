@@ -12,6 +12,9 @@ app.use(express.urlencoded({
 // transforma as informações em objetos do JS
 app.use(express.json())
 
+// utilizar arquivos estáticos
+app.use(express.static('public'))
+
 app.post('/users/save', (req, res) => {
     const nome = req.body.nome
     const idade = req.body.idade
